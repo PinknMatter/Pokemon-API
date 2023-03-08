@@ -62,52 +62,14 @@ function draw() {
    particles[i].update();
  }
 
- for(let i =0; i < 50; i++){
-   grassblades[i].drawgrass();
-   grassblades[i].updategrass();
- }
+
 
  
 }
 
 
 
-class grassy {
-   constructor(){
-      this.grass = grass;
-      this.roff = roff;
-      this.rwave = rwave;
-      this.size = size;
-      this.seg = seg;
-      this.index = index;
-      this.population = 150; 
-   }
 
-   drawgrass(){
-      for( let x = 0; x < width; x+= width/population){
-         this.index +=1;
-         this.grass = x;
-         this.roff = ((this.index * 0.065) + 0.015);
-         this.rwave = 0;
-         this.size = random(35, 55);
-         this.seg = 0.85;
-
-      }
-
-   }
-
-   updategrass(){
-      for(let i = 0; i < this.index; i++){
-         let len = this.size;
-         push();
-         translate(this.grass, height * 0.65);
-         this.blade(len, i);
-         pop();
-      }
-   }
-
-
-}
 
 
 class pParticles {
